@@ -12,6 +12,12 @@ export default function PublicLayout({ jobs, loading, error }) {
       <a href="#main-content" className="skip-link">Skip to main content</a>
       <div className="app-shell">
         <main id="main-content" className="page">
+          <header className="brand-header" aria-label="track.it">
+            <div>
+              <p className="brand-name">track.it</p>
+              <p className="brand-tagline">Personal job hunt tracker</p>
+            </div>
+          </header>
           {error ? (
             <div className="error-banner" role="alert" aria-live="assertive">
               {error}

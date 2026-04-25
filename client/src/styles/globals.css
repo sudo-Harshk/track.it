@@ -80,6 +80,7 @@ body {
   font-size: 16px;
   line-height: 1.5;
   -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 /* Skip link for keyboard users */
@@ -133,6 +134,28 @@ img {
 .page {
   max-width: 720px;
   margin: 0 auto;
+}
+
+.brand-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.brand-name {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.brand-tagline {
+  margin: 4px 0 0;
+  font-size: 13px;
+  color: var(--color-text-muted);
 }
 
 .page-title {
@@ -223,6 +246,53 @@ img {
 
 .chart-card {
   padding: 14px;
+}
+
+.calendar-shell {
+  width: 100%;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
+.calendar-shell .react-activity-calendar {
+  min-width: 100%;
+}
+
+.calendar-shell .react-activity-calendar__calendar {
+  color: var(--color-text-muted);
+}
+
+.calendar-shell .react-activity-calendar__legend,
+.calendar-shell .react-activity-calendar__footer {
+  color: var(--color-text-muted);
+}
+
+.calendar-shell .react-activity-calendar__month-label,
+.calendar-shell .react-activity-calendar__weekday-label {
+  fill: var(--color-text-hint);
+}
+
+.calendar-shell .react-activity-calendar rect[data-date] {
+  stroke: #000;
+  stroke-width: 1px;
+}
+
+.calendar-shell .react-activity-calendar__tooltip {
+  background-color: var(--color-bg-dark);
+  color: var(--color-text-hero);
+  border-radius: 10px;
+  border: 1px solid var(--color-border);
+  box-shadow: 0 16px 32px rgba(28, 25, 23, 0.18);
+}
+
+.calendar-shell .react-activity-calendar__tooltip-arrow {
+  fill: var(--color-bg-dark);
+}
+
+.calendar-empty-state {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: 14px;
 }
 
 .chart-title {
@@ -629,9 +699,13 @@ img {
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
   }
+
   html {
     @apply font-sans;
   }

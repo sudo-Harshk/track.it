@@ -4,6 +4,12 @@
   "workspaces": [
     "client",
     "server"
-  ]
+  ],
+  "dependencies": {
+    "react-github-calendar": "^5.0.6"
+  },
+  "devDependencies": {
+    "@tsconfig/bases": "^1.0.23",
+    "@tsconfig/strictest": "^2.0.8"
+  }
 }
-
