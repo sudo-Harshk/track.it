@@ -40,7 +40,7 @@ Thumbs.db
 # TypeScript
 *.tsbuildinfo
 
-# PDF.js bundled viewer assets (large vendor files)
+# PDF.js bundled viewer assets
 client/public/pdfjs/
 
 # Database (LibSQL/SQLite)
