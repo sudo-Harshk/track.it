@@ -1,0 +1,9 @@
+{
+  "name": "track.it",
+  "private": true,
+  "workspaces": [
+    "client",
+    "server"
+  ]
+}
+
