@@ -19,9 +19,11 @@ app.get('/health', (_req, res) => {
 
 const port = process.env.PORT || 3001;
 
+const shouldListen = !process.env.VERCEL;
+
 initDB()
   .then(() => {
-    if (process.env.NODE_ENV !== 'production') {
+    if (shouldListen) {
       app.listen(port, () => {
         console.log(`Server running on port ${port}`);
       });
@@ -33,4 +35,3 @@ initDB()
   });
 
 export default app;
-

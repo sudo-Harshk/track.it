@@ -118,6 +118,19 @@ npm run build
 
 Output is in `client/dist/`. For deployment, configure your host so `/api/*` is handled by the Node server and static assets are served from `client/dist` (see `vercel.json` if you use Vercel).
 
+## Docker deployment (Render)
+
+This repo includes Dockerfiles for both services (`client/Dockerfile` and `server/Dockerfile`) plus a `render.yaml` blueprint.
+
+1. In Render, create a **Blueprint** from this repo (it will create **trackit-api** and **trackit-web**).
+2. Set the environment variables shown below in Render.
+3. Trigger a redeploy of **trackit-web** after `VITE_API_URL` is set (it is baked at build time).
+
+| Service | Variables |
+|---------|-----------|
+| **trackit-api** | `TURSO_DATABASE_URL`, `TURSO_AUTH_TOKEN` |
+| **trackit-web** | `VITE_API_URL=https://<your-api-service>.onrender.com` (no trailing slash) |
+
 ## Project layout
 
 | Path | Role |
